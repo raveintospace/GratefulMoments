@@ -10,7 +10,7 @@ import SwiftUI
 struct Hexagon<Content: View>: View {
 
     var moment: Moment? = nil
-    var size: CGFloat = 350
+    var layout: HexagonLayout = .standard
     private let borderWidth = 2.0
     var borderColor: Color = .ember
 
@@ -25,22 +25,22 @@ struct Hexagon<Content: View>: View {
             }
 
             content()
-                .frame(width: size, height: size)
+                .frame(width: layout.size, height: layout.size)
         }
         .mask {
             Image(systemName: "hexagon.fill")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: size - borderWidth, height: size - borderWidth)
+                .frame(width: layout.size - borderWidth, height: layout.size - borderWidth)
         }
         .background {
             Image(systemName: "hexagon")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: size, height: size)
+                .frame(width: layout.size, height: layout.size)
                 .foregroundStyle(borderColor)
         }
-        .frame(width: size, height: size)
+        .frame(width: layout.size, height: layout.size)
     }
 }
 
