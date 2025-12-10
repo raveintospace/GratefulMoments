@@ -32,10 +32,6 @@ class Moment {
 }
 
 extension Moment {
-    static let sample = sampleData[0]
-    static let longTextSample = sampleData[1]
-    static let imageSample = sampleData[4]
-
     static let sampleData = [
         Moment(
             title: "🍅🥳",
@@ -61,4 +57,8 @@ extension Moment {
             imageData: UIImage(named: "Concert")?.pngData()
         )
     ]
+
+    static let sample = sampleData[0]
+    static let longTextSample = sampleData[1]
+    static let imageSample = sampleData[4]
 }
