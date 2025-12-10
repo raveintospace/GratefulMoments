@@ -21,7 +21,7 @@ struct Hexagon<Content: View>: View {
             if let background = moment?.image {
                 Image(uiImage: background)
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
             }
 
             content()
