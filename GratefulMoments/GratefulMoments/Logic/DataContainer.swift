@@ -18,9 +18,7 @@ class DataContainer {
     }
 
     init(includeSampleMoments: Bool = false) {
-        let schema = Schema([
-            Moment.self,
-        ])
+        let schema = Schema([Moment.self])
 
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: includeSampleMoments)
 
@@ -30,7 +28,9 @@ class DataContainer {
             if includeSampleMoments {
                 loadSampleMoments()
             }
+
             try context.save()
+            
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
