@@ -30,7 +30,7 @@ class DataContainer {
             }
 
             try context.save()
-            
+
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
