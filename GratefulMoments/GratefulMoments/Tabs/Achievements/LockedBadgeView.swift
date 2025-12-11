@@ -34,6 +34,8 @@ struct LockedBadgeView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     LockedBadgeView(badge: .sample)
 }
+#endif
