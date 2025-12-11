@@ -42,6 +42,8 @@ struct BadgeDetailView: View {
     }
 }
 
+#if DEBUG
 #Preview {
     BadgeDetailView(badge: .sample)
 }
+#endif
