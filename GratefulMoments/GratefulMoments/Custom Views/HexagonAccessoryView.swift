@@ -63,7 +63,7 @@ extension HexagonAccessoryView {
                     .frame(width: size * 0.5, height: size * 0.5)
                     .padding(8)
                     .background {
-                        Image("blank")
+                        Image("Blank")
                             .resizable()
                             .frame(width: size, height: size)
                             .shadow(radius: 2)
