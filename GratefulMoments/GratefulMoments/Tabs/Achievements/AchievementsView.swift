@@ -21,6 +21,7 @@ struct AchievementsView: View {
             }
             .navigationTitle("Achievements")
         }
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge) // disables larger dynamic types
     }
 }
 

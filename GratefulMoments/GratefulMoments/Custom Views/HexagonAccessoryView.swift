@@ -32,7 +32,7 @@ struct HexagonAccessoryView: View {
 }
 
 #Preview("Multiple badges") {
-    HexagonAccessoryView(moment: .imageSample, hexagonLayout: .large)
+    HexagonAccessoryView(moment: .imageSample, hexagonLayout: .standard)
         .sampleDataContainer()
 }
 #endif
@@ -60,6 +60,7 @@ extension HexagonAccessoryView {
             if badges.count > 1 {
                 Text("+\(badges.count)")
                     .bold()
+                    .minimumScaleFactor(0.3) // allows the text to scale down when the font and layout requires truncation.
                     .frame(width: size * 0.5, height: size * 0.5)
                     .padding(8)
                     .background {

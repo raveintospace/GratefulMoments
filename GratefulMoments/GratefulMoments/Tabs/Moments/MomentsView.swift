@@ -55,6 +55,7 @@ struct MomentsView: View {
             .defaultScrollAnchor(.bottom, for: .sizeChanges)
             .defaultScrollAnchor(.top, for: .alignment)
         }
+        .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
     }
 }
 
