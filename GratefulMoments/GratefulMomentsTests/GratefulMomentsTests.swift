@@ -19,6 +19,7 @@ struct StreakCalculatorTests {
         let days: [Int]
     }
 
+    /// To exist a strike, the array must have a 0 or a 1
     @Test("Streak calculations",
           arguments: [
             Input(expectedStreak: 2, days: [-2, -1]),
@@ -47,5 +48,4 @@ struct StreakCalculatorTests {
         #expect(streak == input.expectedStreak, "\(input.days)")
 
     }
-
 }
